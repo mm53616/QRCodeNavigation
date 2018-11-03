@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mmant.qrcodenavigation.MainActivity">
+
+    <ImageView
+        android:src="@drawable/back2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/aboutTitleTextView"
+                style="@style/TextStyle"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:text="Information about the app:"
+                android:textAllCaps="true"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/aboutTheAppTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/About"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:textSize="20sp"
+                android:text="In-house navigation using camera data and QR-codes
+a) camera data measurements using the Android device
+b) QR-code recognition, mapping of IDs to locations, map creation
+c) Function: ADD LOCATION (QR code + location description -> store in the server) - JSON/REST request
+d) Function: FIND LOCATION (QR code + location retrieval from server) - JSON/REST request
+The system needs to provide services for many connected devices."/>
+
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_border"
+                android:onClick="Back"
+                android:text="Back"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

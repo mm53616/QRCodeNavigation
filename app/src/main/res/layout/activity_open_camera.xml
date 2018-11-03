@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mmant.qrcodenavigation.MainActivity">
+
+    <ImageView
+        android:src="@drawable/back2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="10"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonCamera"
+                style="@style/ButtonStyle"
+                android:layout_weight="2"
+                android:text="Scan code"
+                android:background="@drawable/button_border"
+                android:onClick="scanCode"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewOfPhoto"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent" />
+
+
+            <Button
+                android:id="@+id/buttonBack"
+                style="@style/ButtonStyle"
+                android:layout_weight="2"
+                android:background="@drawable/button_border"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_width="match_parent"
+                android:onClick="Back"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
